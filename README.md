@@ -1,43 +1,40 @@
-# Dynamic — Digital Marketing HTML Template
+# HS Digital Services — BPO & Digital Services Website
 
-A modern, responsive HTML template for digital marketing agencies, SEO firms, and creative studios. Built with HTML, CSS, JavaScript, and PHP for dynamic form handling.
+Official website for **HS Digital Services**, a premier BPO provider offering inbound call center support, outbound campaigns, live chat, omnichannel CX, medical billing, lead generation, and insurance program services. Built with HTML, CSS, JavaScript, and PHP for dynamic form handling.
 
 ---
 
 ## About
 
-**Dynamic** is a clean, conversion-focused template that gives marketing agencies everything needed for a professional web presence — service pages, portfolio, blog, team, pricing, and a working contact form.
+**HS Digital Services** is the online home of a BPO company delivering expert inbound call center solutions, outbound campaigns, live chat support, and omnichannel customer experience. Since 2018, the company has helped businesses across healthcare, insurance, solar, and telecom sectors achieve operational excellence and revenue growth.
 
-Suitable for:
+The website serves:
 
-- Digital marketing agencies
-- SEO & SEM companies
-- Social media marketing firms
-- Advertising and branding studios
-- Freelance marketers and consultants
+- Businesses looking to outsource customer support and call center operations
+- Healthcare and insurance companies needing medical billing and claims support
+- Solar and telecom companies seeking lead generation and appointment setting
+- Brands wanting 24/7 multilingual customer support with guaranteed SLAs
 
 ---
 
-## Features
+## What the Website Does
 
-### Front-End
+### For Visitors
 
-- Fully responsive (desktop, tablet, mobile)
-- Modern UI with smooth animations
-- Multiple home page variations
-- Service, portfolio, blog, team & pricing pages
-- SEO-friendly semantic HTML5
-- Cross-browser compatible
-- Easy to customise
+- Browse all BPO services and detailed service pages
+- Learn about inbound, outbound, live chat and omnichannel solutions
+- Explore industry-specific programs (Final Expense, Medicare, ACA)
+- View client testimonials and success stories
+- Read about AI-powered routing and human agent support
+- Send an enquiry through the contact form
 
-### Back-End (PHP)
+### Behind the Scenes (PHP)
 
-- Working contact form with server-side validation
-- Newsletter subscription handler
-- Dynamic blog system
-- Reusable header, footer and sidebar includes
-- Email notifications on form submission
-- Central config file for site settings
+- Contact form validates input and sends email notifications
+- Newsletter subscription stores subscriber emails
+- Service and program pages loaded dynamically
+- Shared header, footer and sidebar are reused across pages
+- Central config file controls site settings and email recipients
 
 ---
 
@@ -56,19 +53,19 @@ Suitable for:
 
 ---
 
-## Project Structure
+## Site Pages
 
 ```
-dynamic/
+hs-digital-services/
 ├── index.php                  # Home page
-├── about.php                  # About page
+├── about.php                  # About the company
 ├── services.php               # Services listing
 ├── service-single.php         # Single service detail
-├── portfolio.php              # Portfolio / case studies
+├── programs.php               # Industry programs (Insurance, Solar, Medical)
+├── testimonials.php           # Client feedback
 ├── blog.php                   # Blog listing
 ├── blog-single.php            # Blog article detail
 ├── team.php                   # Team members
-├── pricing.php                # Pricing plans
 ├── contact.php                # Contact page
 ├── includes/
 │   ├── config.php             # Site configuration
@@ -89,6 +86,19 @@ dynamic/
 
 ---
 
+## Services Covered
+
+- **Inbound Call Center** — 24/7 customer support, help desk, order processing
+- **Outbound Campaigns** — telemarketing, appointment setting, customer outreach
+- **Live Chat & Omnichannel** — voice, email, chat, social media, SMS
+- **Medical Billing** — claims processing, revenue cycle management, HIPAA-compliant
+- **Customer Support** — multilingual desk, ticket management, retention programs
+- **Lead Generation** — AI-powered prospecting, B2B qualification, nurturing
+- **Insurance Programs** — Final Expense, Medicare & ACA support
+- **Solar & Medical Delivery** — appointment setting, scheduling, logistics support
+
+---
+
 ## Getting Started
 
 ### Requirements
@@ -100,11 +110,11 @@ dynamic/
 
 ### Installation
 
-1. **Clone or download the template**
+1. **Clone or download the site**
 
    ```bash
-   git clone https://github.com/your-username/dynamic.git
-   cd dynamic
+   git clone https://github.com/your-username/hs-digital-services.git
+   cd hs-digital-services
    ```
 
 2. **Configure the site**
@@ -112,9 +122,9 @@ dynamic/
    Open `includes/config.php` and update:
 
    ```php
-   define('SITE_NAME', 'Dynamic');
-   define('SITE_URL',  'https://yourdomain.com');
-   define('ADMIN_EMAIL', 'you@yourdomain.com');
+   define('SITE_NAME', 'HS Digital Services');
+   define('SITE_URL',  'https://hsdigitalservices.com');
+   define('ADMIN_EMAIL', 'you@hsdigitalservices.com');
    ```
 
 3. **Set up the database** *(optional)*
@@ -123,7 +133,7 @@ dynamic/
 
    ```php
    $host = 'localhost';
-   $db   = 'dynamic_db';
+   $db   = 'hs_digital_db';
    $user = 'root';
    $pass = '';
    ```
@@ -206,6 +216,7 @@ header('Location: ../contact.php?status=success');
 - Prepared statements are used for all database queries
 - Form handlers validate on the server, not just the client
 - Keep `config.php` out of version control if it holds credentials
+- HIPAA-compliant handling for medical billing and patient data
 
 ---
 
@@ -225,7 +236,10 @@ header('Location: ../contact.php?status=success');
 
 Released under the [MIT License](LICENSE). Free for personal and commercial use.
 
+---
 
+
+---
 
 ## Credits
 
@@ -235,3 +249,5 @@ Released under the [MIT License](LICENSE). Free for personal and commercial use.
 - jQuery
 
 ---
+
+**Note:** Replace placeholder names and links with your own before publishing.
