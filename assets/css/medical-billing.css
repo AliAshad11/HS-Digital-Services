@@ -1,0 +1,117 @@
+/* Medical Billing page styles - uses site palette: #CCFF00 (accent), #CCDEFF (light), dark bg */
+.root{
+    --accent: #CCFF00;
+    --muted: #CCDEFF;
+    --bg-dark: #031320;
+    --card-bg: rgba(255,255,255,0.03);
+}
+/* NOTE: using .root was a mistake earlier; ensure :root exists for CSS variables */
+:root{ --accent: #CCFF00; --muted: #CCDEFF; --bg-dark: #031320; --card-bg: rgba(255,255,255,0.03); }
+.mb-hero { padding: 60px 0; }
+.mb-hero-inner { display:flex; align-items:center; gap:40px; }
+.mb-hero-text { text-align:left; }
+.mb-hero-text h1 { font-size:48px; }
+.mb-hero-text .lead { max-width: 640px; color: #bfcfd9; }
+.mb-hero-text .eyebrow { margin-bottom:8px; }
+.mb-hero-text { max-width:640px; margin:0 auto; }
+.mb-hero-image { display:flex; justify-content:center; }
+.mb-hero-image img { max-width:420px; }
+
+/* Page-specific hero fixes for contrast & alignment */
+.hero-area-1 .hero-inner-left { top: 80px !important; }
+.hero-area-1 .hero-title h2 { color: #CCDEFF !important; text-shadow: 0 8px 30px rgba(0,0,0,0.7); }
+.hero-area-1 .hero-title p { color: #bfcfd9 !important; }
+.hero-area-1 .banner-big-img { max-width: 95% !important; filter: drop-shadow(0 12px 30px rgba(0,0,0,0.6)); }
+
+/* Key Benefits */
+.mb-benefits { padding: 40px 0; }
+.mb-benefits .mb-benefit-list { list-style: none; padding-left:0; margin-top:16px; }
+.mb-benefits .mb-benefit-list li { padding:10px 0; color:#c9d6e6; }
+.benefit-box { background: rgba(3,19,32,0.6); padding:20px; border-radius:8px; border:1px solid rgba(204,222,255,0.03); }
+.benefit-box h4 { color: var(--muted); margin-bottom:8px; }
+.benefit-box p { color:#bfcfd9; margin-bottom:12px; }
+.mb-hero-text .eyebrow { color: var(--accent); text-transform:uppercase; font-weight:700; letter-spacing:1px; }
+.mb-hero-text h1 { color: var(--muted); font-size:42px; margin:12px 0; line-height:1.08; }
+.mb-hero-text .lead { color: #aebfd0; font-size:16px; max-width:620px; }
+.cta-row { margin-top:18px; display:flex; gap:12px; }
+.btn-primary { background: linear-gradient(90deg,var(--accent), #B7FF66); color:#000; padding:12px 26px; border-radius:6px; text-transform:uppercase; font-weight:700; display:inline-block; }
+.btn-outline { border:1px solid rgba(204,222,255,0.12); color:var(--muted); padding:10px 20px; border-radius:6px; background:transparent; text-decoration:none; }
+.mb-hero-image img { max-width:100%; height:auto; display:block; border-radius:10px; }
+
+.mb-section { padding:60px 0; }
+.mb-section.bg-dark { background: transparent; }
+.mb-features { list-style: none; padding-left:0; margin-top:18px; }
+.mb-features li { padding:8px 0; position:relative; padding-left:26px; }
+.mb-features li::before { content: '•'; position:absolute; left:0; top:0; color:var(--accent); font-size:22px; line-height:1; }
+.mb-cards .card { background: rgba(12,18,20,0.6); padding:20px; border-radius:8px; margin-bottom:12px; border:1px solid rgba(204,222,255,0.03); }
+.mb-cards .card h3 { color:var(--muted); margin-bottom:8px; }
+
+.mb-process { padding:60px 0; background: transparent; }
+.process-grid { display:grid; grid-template-columns: repeat(4,1fr); gap:18px; margin-top:24px; }
+.process-item { background: rgba(10,16,18,0.55); padding:22px; border-radius:8px; text-align:left; border:1px solid rgba(204,222,255,0.02); }
+.process-item h4 { color: var(--accent); margin-bottom:8px; }
+
+/* Metrics */
+.mb-metrics { padding:40px 0; }
+.metrics-grid { display:flex; gap:16px; justify-content:space-between; flex-wrap:wrap; }
+.metric { background: rgba(3,19,32,0.6); border-radius:8px; padding:18px; flex:1 1 30%; min-width:200px; text-align:center; }
+.metric .num { font-size:28px; color:var(--accent); font-weight:800; }
+.metric .label { color:var(--muted); margin-top:6px; }
+
+/* FAQ */
+.mb-faq { padding:40px 0; }
+.faq-item { background: rgba(3,19,32,0.35); border-radius:8px; padding:16px; margin-bottom:12px; }
+.faq-item h5 { margin:0 0 8px 0; color:var(--muted); }
+.faq-item p { margin:0; color:#c9d6e6; }
+
+.mb-cta { padding:40px 0; }
+.mb-cta.bg-contrast { background: rgba(204,255,0,0.04); }
+
+@media (max-width: 991px) {
+    .mb-hero-inner { flex-direction:column-reverse; text-align:center; }
+    .mb-hero-text h1 { font-size:34px; }
+    .process-grid { grid-template-columns: repeat(2,1fr); }
+    .metrics-grid { flex-direction:column; }
+    .hero-area-1 .hero-inner-left { top: 40px !important; }
+}
+
+/* ----- Accessibility & Contrast fixes ----- */
+.mb-section, .mb-benefits, .mb-process, .mb-metrics, .mb-faq { color: #cfe6ff; }
+.mb-section p, .mb-benefits p, .mb-process p, .mb-cards .card p, .mb-faq p { color: #cfe6ff; opacity: 0.95; }
+.mb-features li { color: #dbeefc; font-weight:600; margin-bottom:10px; }
+.mb-features li::before { content: '\2022'; color: var(--accent); font-size:18px; display:inline-block; width:22px; margin-left:-22px; margin-right:8px; vertical-align: middle; }
+
+/* Make process cards readable and elevated */
+.process-item { background: rgba(6,24,26,0.8); box-shadow: 0 8px 24px rgba(0,0,0,0.45); }
+.process-item p { color: #bfcfd9; opacity: 0.95; }
+
+/* Make metric boxes clearer */
+.metric { background: rgba(6,24,26,0.85); color: #cfe6ff; box-shadow: 0 6px 18px rgba(0,0,0,0.45); }
+.metric .num { color: var(--accent); font-size:30px; }
+
+/* FAQ contrast */
+.faq-item { background: rgba(6,24,26,0.85); box-shadow: 0 6px 18px rgba(0,0,0,0.45); }
+.faq-item h5 { color: #e6f6ff; }
+.faq-item p { color: #d1e8f6; }
+
+/* Buttons: ensure visibility */
+.btn-primary, .btn-1 { box-shadow: 0 6px 18px rgba(0,0,0,0.45); }
+
+/* Section headings */
+.mb-section h2, .mb-process h2, .mb-faq h2, .mb-benefits h3 {
+    color: #dbeefc;
+    opacity: 0.98;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+
+@media (max-width: 575px) {
+    .mb-hero { padding:30px 0; }
+    .mb-hero-text h1 { font-size:28px; }
+    .process-grid { grid-template-columns: 1fr; }
+    .cta-row { justify-content:center; }
+}
+
+/* Ensure breadcrumb and hero are close together */
+.bread-crumb-area { margin-bottom: 8px; padding-bottom: 6px; }
