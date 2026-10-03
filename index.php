@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HS Digital Services | BPO & Call Center Solutions</title>
+    <title>HS Digital Services | BPO & Call Center Solutions for you</title>
     <!--Essential css files-->
     <link rel="stylesheet" href="assets/css/all.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
